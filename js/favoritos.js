@@ -1,4 +1,4 @@
-const data = [
+const favoritos = [
   {
     title: "Sevilla",
     description: "Sevilla es la capital de Andalucía, famosa por su historia, su arte, la Giralda, el Alcázar y su ambiente alegre y tradicional.",
@@ -16,4 +16,4 @@ const data = [
   }
 ];
 
-export default pokemons
+export default favoritos
