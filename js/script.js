@@ -2,14 +2,15 @@
 import favoritos from "./favoritos.js" 
 import cities from "./cities.js" 
 
+// ----- Cards ----- //
 
 const cards = document.getElementById("cards");
 
 for(let i = 0; i < favoritos.length; i++) {
-    const divCard = document.createElement("div");
+    const articleCard = document.createElement("article");
     const atributo = document.createAttribute("class");
     atributo.value = "card";
-    divCard.setAttributeNode(atributo);
+    articleCard.setAttributeNode(atributo);
 
     const img = document.createElement("img");
     img.src = favoritos[i].url_img;
@@ -21,11 +22,13 @@ for(let i = 0; i < favoritos.length; i++) {
     const p = document.createElement("p");
     p.textContent = favoritos[i].description;
 
-    divCard.append(img);
-    divCard.append(h3);
-    divCard.append(p);
-    cards.appendChild(divCard);
+    articleCard.append(img);
+    articleCard.append(h3);
+    articleCard.append(p);
+    cards.appendChild(articleCard);
 }
+
+// ----- Selector ----- //
 
 const selector = document.getElementById("selector");
 
@@ -43,7 +46,6 @@ for (let i = 0; i < cities.length; i++) {
     const value = document.createAttribute("value");
     value.value = cities[i];
     option.setAttributeNode(value);
-    
 
     select.appendChild(option)
     selector.appendChild(select);
